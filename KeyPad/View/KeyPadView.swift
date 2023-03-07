@@ -74,5 +74,5 @@ class KeyPadView: UIView {
         NSLayoutConstraint.activate(constrainst)
     }
     
-    func addForthRow() {}
+    //func addForthRow() {}
 }
