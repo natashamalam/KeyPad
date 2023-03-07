@@ -35,7 +35,7 @@ class KeyPadView: UIView {
     }
     
     private func addButtonsRows() {
-        for row in 0 ..< viewModel.numberOfButtons {
+        for row in 0 ..< viewModel.maximumNumberInRow {
             let row = addButtons(at: row)
             mainStackView.addArrangedSubview(row)
         }
@@ -44,8 +44,11 @@ class KeyPadView: UIView {
     private func addButtons(at row: Int) -> UIStackView {
         let rowStackView = setHorizontalStackView()
         
-        for column in 0 ..< viewModel.maximumNumberOfRows {
-            let keyButton = KeyButton(key: "\(column)")
+        var start = row * 3
+        let end = start + viewModel.maximumNumberInRow
+        while start <  end {
+            start += 1
+            let keyButton = KeyButton(key: "\(start)")
             rowStackView.addArrangedSubview(keyButton)
         }
         return rowStackView

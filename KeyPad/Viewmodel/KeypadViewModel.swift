@@ -10,10 +10,10 @@ import Foundation
 class KeypadViewModel {
     
     var numberOfButtons: Int {
-        return 9
+        return 10
     }
     
-    var maximumNumberOfRows: Int {
+    var maximumNumberInRow: Int {
         return 3
     }
 }

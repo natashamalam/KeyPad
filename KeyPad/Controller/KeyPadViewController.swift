@@ -15,6 +15,15 @@ class KeyPadViewController: UIViewController {
         super.viewDidLoad()
         keyPadView = KeyPadView(viewModel: KeypadViewModel())
         self.view.addSubview(keyPadView)
+        addlayoutConstraints()
+    }
+    
+    func addlayoutConstraints() {
+        let constraints = [
+            keyPadView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            keyPadView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
     }
 
 }
