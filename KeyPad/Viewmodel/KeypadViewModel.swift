@@ -16,4 +16,6 @@ class KeypadViewModel {
     var maximumNumberInRow: Int {
         return 3
     }
+    
+    func testBuildTrigger() {}
 }
