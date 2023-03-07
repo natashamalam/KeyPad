@@ -35,7 +35,7 @@ class KeyPadView: UIView {
     }
     
     private func addButtonsRows() {
-        for row in 0 ..< viewModel.maximumNumberInRow {
+        for row in 0 ..< viewModel.maximumNumberOfRow {
             let row = addButtons(at: row)
             mainStackView.addArrangedSubview(row)
         }
@@ -44,24 +44,20 @@ class KeyPadView: UIView {
     private func addButtons(at row: Int) -> UIStackView {
         let rowStackView = setHorizontalStackView()
         
-        var start = row * 3
-        let end = start + viewModel.maximumNumberInRow
-        while start <  end {
+        let numberOfKeys = viewModel.numberOfButtons(for: row)
+        
+        var start = row * numberOfKeys
+        var end = start + numberOfKeys
+        while start < end {
+            if numberOfKeys == 1 {
+                start = -1
+                end = 0
+            }
             start += 1
             let keyButton = KeyButton(key: "\(start)")
             rowStackView.addArrangedSubview(keyButton)
         }
         return rowStackView
-    }
-    
-    private func setHorizontalStackView() -> UIStackView {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .horizontal
-        stackView.spacing = 10
-        stackView.distribution = .fillEqually
-        stackView.alignment = .fill
-        return stackView
     }
     
     private func addLayoutConstraints() {
@@ -73,6 +69,17 @@ class KeyPadView: UIView {
         ]
         NSLayoutConstraint.activate(constrainst)
     }
-    
-    func addForthRow() {}
+}
+
+
+extension KeyPadView {
+    func setHorizontalStackView() -> UIStackView {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.spacing = 10
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        return stackView
+    }
 }

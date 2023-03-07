@@ -9,12 +9,12 @@ import Foundation
 
 class KeypadViewModel {
     
-    var numberOfButtons: Int {
-        return 10
+    var maximumNumberOfRow: Int {
+        return 4
     }
     
-    var maximumNumberInRow: Int {
-        return 3
+    func numberOfButtons(for row: Int) -> Int {
+        return row == 3 ? 1 : 3
     }
     
     func testBuildTrigger() {}
