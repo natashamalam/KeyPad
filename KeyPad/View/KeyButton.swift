@@ -27,10 +27,5 @@ class KeyButton: UIButton {
         self.layer.borderColor = UIColor.systemRed.cgColor
         setTitle(keyValue, for: .normal)
     }
-    
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.layer.cornerRadius = self.bounds.width/2
-    }
+
 }
