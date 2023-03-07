@@ -14,7 +14,18 @@
 		0FADEEC129B60EF400CC23CA /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FADEEC029B60EF400CC23CA /* KeyButton.swift */; };
 		0FADEEC329B6102500CC23CA /* KeyPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FADEEC229B6102500CC23CA /* KeyPadView.swift */; };
 		0FADEEC529B6104400CC23CA /* KeypadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FADEEC429B6104400CC23CA /* KeypadViewModel.swift */; };
+		0FADEECD29B6FD6300CC23CA /* KeyPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FADEECC29B6FD6300CC23CA /* KeyPadTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0FADEECE29B6FD6300CC23CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FADEE9A29B60E1E00CC23CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FADEEA129B60E1E00CC23CA;
+			remoteInfo = KeyPad;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0FADEEA229B60E1E00CC23CA /* KeyPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +37,19 @@
 		0FADEEC029B60EF400CC23CA /* KeyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButton.swift; sourceTree = "<group>"; };
 		0FADEEC229B6102500CC23CA /* KeyPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadView.swift; sourceTree = "<group>"; };
 		0FADEEC429B6104400CC23CA /* KeypadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadViewModel.swift; sourceTree = "<group>"; };
+		0FADEECA29B6FD6300CC23CA /* KeyPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FADEECC29B6FD6300CC23CA /* KeyPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0FADEE9F29B60E1E00CC23CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FADEEC729B6FD6300CC23CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				0FADEEA429B60E1E00CC23CA /* KeyPad */,
+				0FADEECB29B6FD6300CC23CA /* KeyPadTests */,
 				0FADEEA329B60E1E00CC23CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				0FADEEA229B60E1E00CC23CA /* KeyPad.app */,
+				0FADEECA29B6FD6300CC23CA /* KeyPadTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +132,14 @@
 			path = Viewmodel;
 			sourceTree = "<group>";
 		};
+		0FADEECB29B6FD6300CC23CA /* KeyPadTests */ = {
+			isa = PBXGroup;
+			children = (
+				0FADEECC29B6FD6300CC23CA /* KeyPadTests.swift */,
+			);
+			path = KeyPadTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +160,24 @@
 			productReference = 0FADEEA229B60E1E00CC23CA /* KeyPad.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0FADEEC929B6FD6300CC23CA /* KeyPadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FADEED229B6FD6300CC23CA /* Build configuration list for PBXNativeTarget "KeyPadTests" */;
+			buildPhases = (
+				0FADEEC629B6FD6300CC23CA /* Sources */,
+				0FADEEC729B6FD6300CC23CA /* Frameworks */,
+				0FADEEC829B6FD6300CC23CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0FADEECF29B6FD6300CC23CA /* PBXTargetDependency */,
+			);
+			name = KeyPadTests;
+			productName = KeyPadTests;
+			productReference = 0FADEECA29B6FD6300CC23CA /* KeyPadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -142,6 +190,10 @@
 				TargetAttributes = {
 					0FADEEA129B60E1E00CC23CA = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					0FADEEC929B6FD6300CC23CA = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 0FADEEA129B60E1E00CC23CA;
 					};
 				};
 			};
@@ -159,6 +211,7 @@
 			projectRoot = "";
 			targets = (
 				0FADEEA129B60E1E00CC23CA /* KeyPad */,
+				0FADEEC929B6FD6300CC23CA /* KeyPadTests */,
 			);
 		};
 /* End PBXProject section */
@@ -170,6 +223,13 @@
 			files = (
 				0FADEEB229B60E1F00CC23CA /* LaunchScreen.storyboard in Resources */,
 				0FADEEAF29B60E1F00CC23CA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FADEEC829B6FD6300CC23CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +248,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FADEEC629B6FD6300CC23CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FADEECD29B6FD6300CC23CA /* KeyPadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0FADEECF29B6FD6300CC23CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FADEEA129B60E1E00CC23CA /* KeyPad */;
+			targetProxy = 0FADEECE29B6FD6300CC23CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0FADEEB029B60E1F00CC23CA /* LaunchScreen.storyboard */ = {
@@ -378,6 +454,42 @@
 			};
 			name = Release;
 		};
+		0FADEED029B6FD6300CC23CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NUV73DSTTT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rulewithvirtualization.KeyPadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeyPad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KeyPad";
+			};
+			name = Debug;
+		};
+		0FADEED129B6FD6300CC23CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NUV73DSTTT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rulewithvirtualization.KeyPadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeyPad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KeyPad";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -395,6 +507,15 @@
 			buildConfigurations = (
 				0FADEEB729B60E1F00CC23CA /* Debug */,
 				0FADEEB829B60E1F00CC23CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FADEED229B6FD6300CC23CA /* Build configuration list for PBXNativeTarget "KeyPadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FADEED029B6FD6300CC23CA /* Debug */,
+				0FADEED129B6FD6300CC23CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
