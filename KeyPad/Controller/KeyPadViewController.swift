@@ -9,6 +9,8 @@ import UIKit
 
 class KeyPadViewController: UIViewController {
     
+    let configuration = Configuration()
+    
     var keyPadView: KeyPadView!
 
     var someLabel: UILabel = {
@@ -22,7 +24,7 @@ class KeyPadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         keyPadView = KeyPadView(viewModel: KeypadViewModel())
-        someLabel.text = "Some Text"
+        someLabel.text = configuration.labelTitle
         addSubViews()
         addlayoutConstraints()
     }
