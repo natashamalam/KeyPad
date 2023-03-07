@@ -23,7 +23,7 @@ class KeyPadTests: XCTestCase {
     }
     
     func testAdd() {
-        XCTAssertEqual(sut.numberOfButtons, 10)
+        XCTAssertEqual(sut.numberOfButtons(for: 0), 3)
     }
 
 }
