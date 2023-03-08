@@ -83,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				0FADEEB929B60E2300CC23CA /* Main */,
+				0FADEEE129B72D8700CC23CA /* Model */,
 				0FADEEBD29B60E5900CC23CA /* Viewmodel */,
 				0FADEEBC29B60E5300CC23CA /* View */,
 				0FADEEBB29B60E4900CC23CA /* Controller */,
@@ -130,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				0FADEEC429B6104400CC23CA /* KeypadViewModel.swift */,
-				0FADEEDF29B7205800CC23CA /* Configuration.swift */,
 			);
 			path = Viewmodel;
 			sourceTree = "<group>";
@@ -141,6 +141,14 @@
 				0FADEECC29B6FD6300CC23CA /* KeyPadTests.swift */,
 			);
 			path = KeyPadTests;
+			sourceTree = "<group>";
+		};
+		0FADEEE129B72D8700CC23CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0FADEEDF29B7205800CC23CA /* Configuration.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
