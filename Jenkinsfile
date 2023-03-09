@@ -4,12 +4,12 @@ pipeline {
 	stages {
 		stage('clone repo') {
 			steps {
-				sh 'git clone'
+				git clone
 			}
 		}
 		stage('checkout dev') {
 			steps {
-				sh 'git checkout dev'
+				git checkout dev
 			}
 		}
 	}
