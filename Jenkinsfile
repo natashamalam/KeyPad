@@ -1,7 +1,16 @@
-node {
-    stage('Check-out') {
-        echo 'Checking out'
+pipeline {
+	agent any
 
-        checkout scm
-    }
+	stages {
+		stage('clone repo') {
+			steps {
+				scm clone
+			}
+		}
+		stage('checkout dev') {
+			steps {
+				scm checkout
+			}
+		}
+	}
 }
