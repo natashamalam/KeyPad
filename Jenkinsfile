@@ -12,11 +12,6 @@ pipeline {
 				sh 'cd TempKeyPad'
 			}
 		}
-		stage('clone into repo dir') {
-			steps {
-				sh 'git clone https://github.com/natashamalam/KeyPad.git'
-			}
-		}
 		stage('checkout dev') {
 			steps {
 				sh 'git checkout dev'
