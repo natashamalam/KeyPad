@@ -2,15 +2,20 @@ pipeline {
 	agent any
 
 	stages {
-		stage('clone repo') {
-			steps {
-				git clone
-			}
-		}
-		stage('checkout dev') {
-			steps {
-				git checkout dev
-			}
-		}
+		stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
 	}
 }
