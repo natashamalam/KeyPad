@@ -7,5 +7,10 @@ pipeline {
 				sh 'git checkout dev'
 			}
 		}
+		stage('build dev') {
+			steps {
+				sh 'xcodebuild -project KeyPad.xcodeproj'
+			}
+		}
 	}
 }
