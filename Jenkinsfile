@@ -10,7 +10,7 @@ pipeline {
 		stage('test only if build is done') {
 			when {
 				expression {
-					env.GIT_BRANCH == "Test/*"
+					env.GIT_BRANCH == "test/*"
 				}
 			}
 			steps {
@@ -20,7 +20,7 @@ pipeline {
 		stage('archive') {
 			when {
 				expression {
-					env.GIT_BRANCH == "Release/*"
+					env.GIT_BRANCH == "release/*"
 				}
 			}
 			steps {
