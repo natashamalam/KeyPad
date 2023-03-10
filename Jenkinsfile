@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('checkout dev') {
 			steps {
-				sh 'xcodebuild'
+				sh 'xcodebuild KeyPad.xcodeproj'
 			}
 		}
 	}
