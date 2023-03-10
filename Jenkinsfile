@@ -2,14 +2,9 @@ pipeline {
 	agent any
 
 	stages {
-		stage('create repo dir') {
+		stage('stage one') {
 			steps {
-				sh 'mkdir TempKeyPad'
-			}
-		}
-		stage('navigate to repo dir') {
-			steps {
-				sh 'cd TempKeyPad'
+				sh 'git fetch --tags'
 			}
 		}
 		stage('checkout dev') {
