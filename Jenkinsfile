@@ -12,6 +12,11 @@ pipeline {
 				sh "xcodebuild test -project KeyPad.xcodeproj -scheme KeyPadTests -destination 'platform=iOS Simulator,name=iPhone 14'"
 			}
 		}
+		stage('archive') {
+			steps {
+				sh "xcodebuild -project KeyPad.xcodeproj -scheme KeyPad -archivePath ./KeyPad.xcarchive -destination generic/platform=iOS archive'"
+			}
+		}
 	}
 	post {
 		always {
