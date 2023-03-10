@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('stage one') {
 			steps {
-				sh 'git clone'
+				sh 'git clone https://github.com/natashamalam/KeyPad.git'
 			}
 		}
 		stage('checkout dev') {
