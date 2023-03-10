@@ -9,7 +9,7 @@ pipeline {
 		}
 		stage('test only if build is done') {
 			steps {
-				sh "xcodebuild test-without-building -project KeyPad.xcodeproj -scheme KeyPadTests -destination 'platform=iOS Simulator,name=iPhone 14'"
+				sh "xcodebuild test -project KeyPad.xcodeproj -scheme KeyPadTests -destination 'platform=iOS Simulator,name=iPhone 14'"
 			}
 		}
 	}
