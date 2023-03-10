@@ -9,7 +9,7 @@ pipeline {
 		}
 		stage('build dev') {
 			steps {
-				sh 'xcodebuild -project KeyPad.xcodeproj'
+				xcodebuild -project KeyPad.xcodeproj
 			}
 		}
 	}
