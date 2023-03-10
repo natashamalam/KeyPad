@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('checkout dev') {
 			steps {
-				sh 'git checkout dev'
+				sh 'git -fetch --tags'
 			}
 		}
 	}
