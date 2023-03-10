@@ -17,11 +17,6 @@ pipeline {
 				sh "xcodebuild test -project KeyPad.xcodeproj -scheme KeyPadTests -destination 'platform=iOS Simulator,name=iPhone 14'"
 			}
 		}
-		stage('some verification') {
-			steps {
-				echo "GIT_BRANCH = ${GIT_BRANCH}"
-			}
-		}
 		stage('archive') {
 			when {
 				expression {
