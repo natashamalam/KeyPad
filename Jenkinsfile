@@ -8,8 +8,18 @@ pipeline {
 			}
 		}
 		stage('test only if build is done') {
+			when {
+				expression {
+					env.GIT_BRANCH == "Test/*"
+				}
+			}
 			steps {
 				sh "xcodebuild test -project KeyPad.xcodeproj -scheme KeyPadTests -destination 'platform=iOS Simulator,name=iPhone 14'"
+			}
+		}
+		stage('some verification') {
+			steps {
+				echo "Branch name = ${BRANCH_NAME}"
 			}
 		}
 		stage('archive') {
