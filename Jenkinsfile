@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('checkout dev') {
 			steps {
-				sh "build"
+				run xcodebuild
 			}
 		}
 	}
