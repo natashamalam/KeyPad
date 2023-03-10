@@ -9,7 +9,7 @@ pipeline {
 		}
 		stage('build dev') {
 			steps {
-				${WORKSPACE}/build
+				sh '/Users/mahjabin.alam/Desktop/TestShell.sh'
 			}
 		}
 	}
