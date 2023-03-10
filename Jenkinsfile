@@ -14,7 +14,7 @@ pipeline {
 		}
 		stage('archive') {
 			when {
-				BRANCH_NAME == "Release/*"
+				env.GIT_BRANCH == "Release/*"
 			}
 			steps {
 				sh 'xcodebuild -project KeyPad.xcodeproj \
