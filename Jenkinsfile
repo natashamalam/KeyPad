@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('build dev') {
 			steps {
-				sh './TestShell.sh'
+				sh 'bash TestShell.sh'
 			}
 		}
 	}
