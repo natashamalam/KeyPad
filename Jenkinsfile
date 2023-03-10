@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('xcode clean') {
 			steps {
-				sh 'xcodebuild clean'
+				sh 'clean'
 			}
 		}
 		stage('clone') {
