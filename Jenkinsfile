@@ -9,7 +9,7 @@ pipeline {
 		}
 		stage('build dev') {
 			steps {
-				sh '/Users/mahjabin.alam/Desktop/TestShell.sh'
+				sh '${pwd}/TestShell.sh'
 			}
 		}
 	}
