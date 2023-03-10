@@ -4,13 +4,18 @@ pipeline {
 	stages {
 		stage('build dev') {
 			steps {
-				sh 'bash TestShell.sh'
+				sh 'xcodebuild -project KeyPad.xcodeproj -scheme KeyPad -destination 'platform=iOS Simulator,name=iPhone 14'
+			}
+		}
+		stage('test only if build is done') {
+			steps {
+				sh "xcodebuild test-without-building -project KeyPad.xcodeproj -scheme KeyPadTests -destination 'platform=iOS Simulator,name=iPhone 14'"
 			}
 		}
 	}
 	post {
 		always {
-			echo "After Execution"
+			sh 'xcodebuild clean'
 		}
 	}
 }
