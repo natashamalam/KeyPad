@@ -4,12 +4,17 @@ pipeline {
 	stages {
 		stage('stage one') {
 			steps {
-				sh 'git fetch --tags'
+				sh 'git clone'
 			}
 		}
 		stage('checkout dev') {
 			steps {
 				sh 'git checkout dev'
+			}
+		}
+		stage('xcode clean') {
+			steps {
+				sh 'xcodebuild clean'
 			}
 		}
 	}
