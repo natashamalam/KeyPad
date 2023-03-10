@@ -9,7 +9,7 @@ pipeline {
 		}
 		stage('build dev') {
 			steps {
-				sh '${pwd}TestShell.sh'
+				sh "xcodebuild -project KeyPad.xcodeproj -scheme KeyPad -destination 'platform=iOS Simulator,name=iPhone 14'"
 			}
 		}
 	}
