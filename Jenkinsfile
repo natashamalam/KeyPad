@@ -19,9 +19,15 @@ pipeline {
 					-destination generic/platform=iOS archive'
 			}
 		}
+		stage('export archive') {
+			steps {
+				sh ''
+			}
+		}
 	}
 	post {
 		always {
+			echo 'cleaning the workspace'
 			sh 'xcodebuild clean'
 		}
 	}
