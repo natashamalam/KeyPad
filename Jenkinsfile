@@ -3,6 +3,11 @@ pipeline {
 
 	stages {
 		stage('build dev') {
+			when {
+				expression {
+					CODE_CHANGES == true
+				}
+			}
 			steps {
 				sh "xcodebuild -project KeyPad.xcodeproj -scheme KeyPad -destination 'platform=iOS Simulator,name=iPhone 14'"
 			}
