@@ -13,9 +13,19 @@ pipeline {
 			}
 		}
 		stage('test dev') {
+			when {
+				expression {
+					BRANCH_NAME == 'dev'
+				}
+			}
 			steps {
 				sh "xcodebuild test-without-building -project KeyPad.xcodeproj -scheme KeyPadTests -destination 'platform=iOS Simulator,name=iPhone 14'"
 			}
+		}
+	}
+	post {
+		always {
+			echo "After Execution"
 		}
 	}
 }
