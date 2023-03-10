@@ -19,7 +19,7 @@ pipeline {
 		}
 		stage('some verification') {
 			steps {
-				echo "Branch name = ${BRANCH_NAME}"
+				echo "CHANGE_URL = ${CHANGE_URL}"
 			}
 		}
 		stage('archive') {
