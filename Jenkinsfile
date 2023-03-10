@@ -2,15 +2,38 @@ pipeline {
 	agent any
 
 	stages {
-		stage('clone repo') {
+		stage('build dev') {
 			steps {
-				scm clone
+				sh "xcodebuild -project KeyPad.xcodeproj -scheme KeyPad -destination 'platform=iOS Simulator,name=iPhone 14'"
 			}
 		}
-		stage('checkout dev') {
-			steps {
-				scm checkout
+		stage('test only if build is done') {
+			when {
+				expression {
+					env.GIT_BRANCH == "Test/*"
+				}
 			}
+			steps {
+				sh "xcodebuild test -project KeyPad.xcodeproj -scheme KeyPadTests -destination 'platform=iOS Simulator,name=iPhone 14'"
+			}
+		}
+		stage('archive') {
+			when {
+				expression {
+					env.GIT_BRANCH == "Release/*"
+				}
+			}
+			steps {
+				sh 'xcodebuild -project KeyPad.xcodeproj \
+					-scheme KeyPad -archivePath KeyPad.xcarchive \
+					-destination generic/platform=iOS archive'
+			}
+		}
+	}
+	post {
+		always {
+			echo 'cleaning the workspace'
+			sh 'xcodebuild clean'
 		}
 	}
 }
