@@ -14,7 +14,9 @@ pipeline {
 		}
 		stage('archive') {
 			steps {
-				sh "xcodebuild -project KeyPad.xcodeproj -scheme KeyPad -archivePath KeyPad.xcarchive -destination generic/platform=iOS archive'"
+				sh 'xcodebuild -project KeyPad.xcodeproj \
+					-scheme KeyPad -archivePath KeyPad.xcarchive \
+					-destination generic/platform=iOS archive'
 			}
 		}
 	}
