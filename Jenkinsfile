@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('checkout dev') {
 			steps {
-				sh 'git -fetch --tags'
+				sh 'xcodebuild -project KeyPad.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 14'
 			}
 		}
 	}
