@@ -31,7 +31,7 @@ pipeline {
 		}
 		stage('copy export config plist') {
 			steps {
-				sh 'cp  /Users/mahjabin.alam/Desktop/Xcode_Workspace/Github/BUILD_OUTPUT/KeyPad/OptionsPlist.plist ${env.WORKSPACE}'
+				sh 'cp /Users/mahjabin.alam/Desktop/Xcode_Workspace/Github/BUILD_OUTPUT/KeyPad/OptionsPlist.plist ${env.WORKSPACE}/'
 			}
 		}
 	}
