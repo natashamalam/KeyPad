@@ -2,7 +2,7 @@ pipeline {
 	agent any
 
 	stages {
-		stage('build dev') {
+		stage('build') {
 			steps {
 				sh "xcodebuild -project KeyPad.xcodeproj -scheme KeyPad -destination 'platform=iOS Simulator,name=iPhone 14'"
 			}
