@@ -29,9 +29,9 @@ pipeline {
 					-destination generic/platform=iOS archive'
 			}
 		}
-		stage('copy export config plist') {
+		stage('export') {
 			steps {
-				sh 'cp /Users/mahjabin.alam/Desktop/Xcode_Workspace/Github/BUILD_OUTPUT/KeyPad/OptionsPlist.plist ${env.WORKSPACE}/'
+				sh 'xcodebuild -exportArchive -archivePath KeyPad.xcarchive -exportPath KeyPad -exportOptionsPlist OptionsPlist.plist'
 			}
 		}
 	}
